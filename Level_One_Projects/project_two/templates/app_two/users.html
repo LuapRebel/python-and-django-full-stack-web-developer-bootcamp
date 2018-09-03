@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>App Two User List</title>
+  </head>
+  <body>
+    <h1>Here are your users:</h1>
+    <div class="djangtwo">
+      {% if users %}
+      <ol>
+        {% for u in users %}
+          <li>
+            User Info
+            <ul>
+              <li>First Name: {{ u.first_name }}</li>
+              <li>Last Name: {{ u.last_name }}</li>
+              <li>Email: {{ u.email }}</li>
+            </ul>
+          </li>
+        {% endfor %}
+      </ol>
+      {% else %}
+        <p>NO USERS FOUND!</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
